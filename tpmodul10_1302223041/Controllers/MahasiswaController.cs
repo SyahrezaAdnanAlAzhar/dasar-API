@@ -27,7 +27,7 @@ namespace tpmodul10_1302223041.Controllers
         [HttpPost]
         public IActionResult Create(Mahasiswa mahasiswa)
         {
-            anggotaKelompok.Append(mahasiswa);
+            anggotaKelompok.Add(mahasiswa);
             return CreatedAtAction(nameof(GetById), new { id = anggotaKelompok.IndexOf(mahasiswa) }, mahasiswa);
         }
 
